@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'rest_framework',
+
     'notepad.apps.NotepadConfig',
     'news.apps.NewsConfig',
     'finance.apps.FinanceConfig',
