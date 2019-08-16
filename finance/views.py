@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http.response import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -27,3 +29,11 @@ class ChartData(APIView):
         }
 
         return Response(data)
+
+# # Using Dash - from plotly
+# def dash(request, **kwargs):
+#     return HttpResponse(dispatcher(request))
+#
+# @csrf_exempt #exempt csrf to be passed to this function
+# def dash_ajax(request):
+#     return HttpResponse(dispatcher(request), content_type = 'application/json')

@@ -5,7 +5,10 @@ from django.conf.urls.static import static
 
 from finance.views import company_article_list, ChartData
 
+from .views import home
+
 urlpatterns = [
+    path('home/', home, 'home'),
     path('admin/', admin.site.urls),
     path('notes/', include('notepad.urls')),
     path('companies/', company_article_list, name="companies"),
